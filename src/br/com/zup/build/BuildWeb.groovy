@@ -23,6 +23,9 @@ class BuildWeb{
             jenkins.node(jenkins.POD_LABEL){
                 jenkins.container('flutter'){
                     try {
+                        jenkins.sh label: "Flutter Clean", 
+                                   script: "flutter clean"
+                                   
                         jenkins.sh label: "Build Web", 
                                    script: "flutter build web"
                     } catch (Exception e) {
