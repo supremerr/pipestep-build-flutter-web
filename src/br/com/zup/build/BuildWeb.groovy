@@ -7,7 +7,7 @@ class BuildWeb{
             containers: [
                 jenkins.containerTemplate(
                     name: 'flutter', 
-                    image: 'flutter', 
+                    image: 'cirrusci/flutter:2.0.1', 
                     ttyEnabled: true, 
                     command: 'cat'
                 )
